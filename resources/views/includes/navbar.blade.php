@@ -1,20 +1,14 @@
 @section('navbar')
-    {{--<div class="navbar">
-        <h3>This is the navbar</h3>
-        @show
-    </div>--}}
 
 <ul>
-    <li class="active has-dropdown"><a>Categories</a>
+    <li><a href="{{ url('/') }}">Homepage</a></li>
+    <li class="has-dropdown"><a href="{{ url('/categories') }}">Categories</a>
         <ul id="dropdown-container">
-            <li class="dropdown"><a>Category 1</a></li>
-            <li class="dropdown"><a>Category 2</a></li>
-            <li class="dropdown"><a>Category 3</a></li>
-            <li class="dropdown"><a>Category 4</a></li>
-            <li class="dropdown"><a>Category 5</a></li>
+            <li class="dropdown"><a href="{{ url('/category1') }}">Category 1</a></li>
+            <li class="dropdown"><a href="{{ url('/category2') }}">Category 2</a></li>
+            <li class="dropdown"><a href="{{ url('/category3') }}">Category 3</a></li>
+            <li class="dropdown"><a href="{{ url('/category4') }}">Category 4</a></li>
+            <li class="dropdown"><a href="{{ url('/category5') }}">Category 5</a></li>
         </ul>
     </li>
-    <li><a>Item 2</a></li>
-    <li><a>Item 3</a></li>
-    <li><a>Item 4</a></li>
 </ul>

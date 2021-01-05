@@ -20,3 +20,24 @@ Route::get('/', function () {
 Route::get('/categories', function() {
     return view('categories');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Category Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/category1', function(){
+    return view('categories/category1');
+});
+Route::get('/category2', function(){
+    return view('categories/category2');
+});
+Route::get('/category3', function(){
+    return view('categories/category3');
+});
+Route::get('/category4', function(){
+    return view('categories/category4');
+});
+Route::get('/category5', function(){
+    return view('categories/category5');
+});

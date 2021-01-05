@@ -5,6 +5,7 @@ ul {
     overflow: hidden;
     background-color: #333;
     font-size: 20px;
+    cursor: pointer;
 }
 
 li {
@@ -14,18 +15,13 @@ li {
 
 li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 1em 2em;
     text-decoration: none;
 }
 
-li:hover:not(.active) {
+li:hover {
     background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
 }
 
 .dropdown {
