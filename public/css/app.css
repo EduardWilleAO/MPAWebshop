@@ -8,7 +8,6 @@
     color: white;
     font-family: Verdana, sans-serif;
 }
-
 body {
     padding: 0;
     margin: 0;
@@ -20,6 +19,12 @@ body {
     font-size: 10em;
     text-align: center;
     margin-top: 300px;
+    text-shadow: 0px 0px 10px black;
+}
+.page-title-small {
+    font-size: 6em;
+    text-align: center;
+    margin-top: 150px;
     text-shadow: 0px 0px 10px black;
 }
 
@@ -46,4 +51,33 @@ body {
     border-radius: 10px;
     text-shadow: 0px 0px 5px black;
     cursor: pointer;
+}
+
+.card-container {
+    padding: 50px;
+}
+.card {
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    width: 20rem;
+    margin: 0px 50px;
+    padding: 1em 2em;
+    color: black;
+    box-shadow: 0px 0px 15px black;
+    text-align: center;
+}
+.card-button {
+    background-color: teal;
+    margin: 20px 0px 0px 0px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+}
+.card-img {
+    background-size: contain;
+    max-width: 271px;
+    height: 377px;
+    margin-left: 25px;
 }
