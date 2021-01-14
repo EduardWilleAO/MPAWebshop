@@ -14,7 +14,7 @@
             <div class="card">
                 <h1 style="color:black;">@php echo $gameArr[$i]; @endphp</h1>
                 <div class="card-img game@php echo $i; @endphp"></div>
-                <button class="card-button">Add to cart</button>
+                <a href="recieveItems/<?php echo $gameArr[$i] ?>"><button class="card-button add@php echo $gameArr[$i]; @endphp">Add to cart</button></a>
             </div>
 
             @php $i++; @endphp
