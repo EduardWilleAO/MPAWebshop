@@ -15,7 +15,7 @@ use App\Http\Controllers\Cart;
 |
 */
 
-Route::get('/recieveItems/{item}', [Cart::class, 'recieveItems']);
+Route::get('/addToCart/{product}', [Cart::class, 'addToCart']);
 
 
 Route::get('/', function () {
