@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Cart;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -15,7 +15,8 @@ use App\Http\Controllers\Cart;
 |
 */
 
-Route::get('/addToCart/{product}', [Cart::class, 'addToCart']);
+//Route::get('/addToCart/{product}', [Cart::class, 'addToCart']);
+Route::get('/cart', [CartController::class, 'index']);
 
 
 Route::get('/', function () {
