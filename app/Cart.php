@@ -14,30 +14,12 @@ class Cart
     }
 
     // IMPORTNAT! begin met iets simpel in de session zetten
-
-
-
-
-    /*public function addToCart($product) {
-        session_start();
-
-        $product = self::getProduct($product);
-
-        array_push($this->cartArray, $_SESSION['product']);
-
-        print_r($this->cartArray); 
-        return redirect()->back();
+    public function logsession($request){
+        $sessionData = session('item1');
+        print_r($sessionData);
     }
 
-    public function getProduct($product)
-    {
-        $available = true;
-
-        //Change with method that actually checks product availability.
-        if($available == true) {
-            $_SESSION['product'] = $product;
-        } else {
-            return;
-        }
-    }*/
+    public function addToCart($request){
+        session(['item1' => 'Hello World']);
+    }
 }

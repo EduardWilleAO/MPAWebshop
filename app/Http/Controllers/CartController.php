@@ -9,6 +9,8 @@ class CartController extends Controller
 {
     public function index(Request $request){
         $cart = new Cart($request);
+        $cart->addToCart($request);
+        $cart->logsession($request);
         return view('cart.index');
     }
 }
