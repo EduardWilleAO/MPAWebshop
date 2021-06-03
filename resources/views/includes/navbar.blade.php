@@ -11,4 +11,5 @@
             <li class="dropdown"><a href="{{ url('category5') }}">Peripherals</a></li>
         </ul>
     </li>
+    <li><a href="{{ url('cart') }}">Cart</a></li>
 </ul>

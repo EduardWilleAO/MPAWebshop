@@ -4,20 +4,14 @@
     <h1 class="page-title-small">Chairs</h1>
 
     <div class="card-container">
-        @php
-            $chairArr = ['Omega', 'Titan', 'Titan XL', 'Office Chair', 'DX Razor'];
-            $i = 0;
-            $c = 5;
-        @endphp
+        @php $chairArr = ['Omega', 'Titan', 'Titan XL', 'Office Chair', 'DX Razor']; @endphp
 
-        @while ( $i < $c )
+        @foreach ( $chairArr as $chairArray )
             <div class="card">
-                <h1 style="color:black;">@php echo $chairArr[$i]; @endphp</h1>
-                <div class="card-img chair@php echo $i; @endphp"></div>
+                <h1 style="color:black;">@php echo $chairArr[$loop->index]; @endphp</h1>
+                <div class="card-img chair@php echo $loop->index; @endphp"></div>
                 <button class="card-button">Add to cart</button>
             </div>
-
-            @php $i++; @endphp
-        @endwhile
+        @endforeach
     </div>
 @endsection
