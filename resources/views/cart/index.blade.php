@@ -5,7 +5,7 @@
 
         <div class="card-container">
             <div class="card">
-                <h1 style="color:black;">Cart Item!</h1>
+                <h1 style="color:black;">Cart Item! @php  @endphp</h1>
             </div>
 
         </div>

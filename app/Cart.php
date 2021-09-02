@@ -7,33 +7,28 @@ use App\Models\User;
 
 class Cart
 {
-    private $session;
+    //get products function
+    private $products;
 
     public function __construct($request){
-        $this->session = $request->session();
+        //if request has products, else lege array in products
+        $this->session = $request->session()->has('products');
+    }
+
+    public function getProducts($request){
+        $sessionData = $request->session()->all();
+        return $sessionData;
+	}
+
+    public function getSession($request){
+        $products = Cart::getProducts($request);
+
+        for($i=0; $i<=count($products['products'])-1; $i++){
+            print_r($products['products'][$i] . '<br>');
+        }
     }
 
     // IMPORTNAT! begin met iets simpel in de session zetten
-    public function logsession($request){
-        $sessionData = $request->session()->all();
-
-        $sessionCount = count($sessionData['products']);
-        echo 'The session has ' . $sessionCount . ' items! <br>';
-
-        //var_dump($sessionData['products']);
-
-        foreach($sessionData as $index){
-            print_r($sessionData['products']);
-        }
-
-        //for($i=0; $i<=0; $i++){
-        //    print_r($sessionData['products']);
-        //    echo ' ' . $i;
-        //    echo '<br>';
-        //}
-
-        //dd($sessionData);
-    }
 
     public function addToCart($request){
         $request->session()->push('products', 'item2');
