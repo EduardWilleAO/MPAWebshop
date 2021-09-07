@@ -28,8 +28,8 @@ class Cart
         //}
     }
 
-    public function addToCart($request){
-        $request->session()->push('products', 'item2');
+    public function addToCart($request, $name){
+        $request->session()->push('products', $name);
     }
     public function clearCart($request){
         $request->session()->flush();

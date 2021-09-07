@@ -15,9 +15,8 @@ use App\Http\Controllers\CartController;
 |
 */
 
-//Route::get('/addToCart/{product}', [Cart::class, 'addToCart']);
 Route::get('/cart', [CartController::class, 'index']);
-
+Route::get('/cart/add/{name}', [CartController::class, 'addToCart'], 'name');
 
 Route::get('/', function () {
     return view('home');
