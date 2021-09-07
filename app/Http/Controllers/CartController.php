@@ -11,8 +11,9 @@ class CartController extends Controller
         $cart = new Cart($request);
         //$cart->addToCart($request);
         //$cart->clearCart($request);
-        $cart->getSession($request);
+        $cart->getProducts($request);
 
-        return view('cart.index');//->with(['cartProducts' => $sessionData]);
+        $products = $request->session()->get('products');
+        return view('cart.index')->with(['cartProducts' => $products]);
     }
 }
