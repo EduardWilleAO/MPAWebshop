@@ -11,10 +11,9 @@
             <div class="card">
                 <h1 style="color:black;">@php echo $gameArr[$loop->index]; @endphp</h1>
                 <div class="card-img game@php echo $loop->index; @endphp"></div>
-                <a href="addToCart/<?php echo $gameArr[$loop->index] ?>"><button class="card-button add@php echo $gameArr[$loop->index]; @endphp">Add to cart</button></a>
 
                 <a href="{{ url('/cart/add/' . $gameArr[$loop->index]) }}">
-                    <button class="card-button add@php echo $gameArr[$loop->index]; @endphp">Add to cart Proper</button>
+                    <button class="card-button add@php echo $gameArr[$loop->index]; @endphp">Add to cart</button>
                 </a>
             </div>
         @endforeach

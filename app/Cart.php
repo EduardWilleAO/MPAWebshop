@@ -8,27 +8,22 @@ use App\Models\User;
 class Cart
 {
     //get products function
-    public $products;
+    private $products;
 
     public function __construct($request){
         //if request has products, else lege array in products
-        $this->session = $request->session()->has('products');
+        if($request->session()->has('products')){
+            $this->products = $request->session()->get('products');
+        } else{
+            $this->products = NULL;
+        }
     }
-
-    public function getSession($request){
-        $sessionData = $request->session()->all();
-        return $sessionData;
-	}
-
     public function getProducts($request){
-        $products = Cart::getSession($request);
-
-        //for($i=0; $i<=count($products['products'])-1; $i++){
-        //   print_r($products['products'][$i] . '<br>');
-        //}
+        return $this->products;
     }
 
     public function addToCart($request, $name){
+        //when item is added in cart, check if exists, if true, add count instead of adding to array (make products in the array objects)
         $request->session()->push('products', $name);
     }
     public function clearCart($request){
